@@ -9,6 +9,7 @@ module.exports = {
     colors: {
       "dm-text": "hsl(0, 0%, 100%)",
       "lm-text": "hsl(200, 15%, 8%)",
+      "lm-input": "hsl(0, 0%, 52%)",
     },
     backgroundColor: {
       "lm-gray": "hsl(0, 0%, 98%)",

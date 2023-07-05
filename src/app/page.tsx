@@ -1,10 +1,8 @@
 import Filter from "@/components/Filter";
-import Header from "@/components/Header";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-lm-gray">
-      <Header />
+    <main className="min-h-screen bg-lm-gray pt-10 text-lm-text">
       <Filter />
     </main>
   );
