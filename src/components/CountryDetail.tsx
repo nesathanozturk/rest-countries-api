@@ -50,14 +50,20 @@ const CountryDetail = ({ countryDetail }: ICountryDetails) => {
           </div>
           <div className="flex flex-wrap gap-2 mt-5">
             <h2 className="text-lg font-semibold">Border Countries:</h2>
-            {countryDetail?.borders?.map((border, i) => (
-              <div
-                key={i}
-                className="bg-gray-200 w-24 h-8 rounded-md shadow-md text-center"
-              >
-                {border}
-              </div>
-            ))}
+            {!countryDetail.borders ? (
+              <p className="text-lg font-semibold">No border countries</p>
+            ) : (
+              <>
+                {countryDetail?.borders?.map((border, i) => (
+                  <div
+                    key={i}
+                    className="bg-gray-200 w-24 h-8 rounded-md shadow-md text-center"
+                  >
+                    {border}
+                  </div>
+                ))}
+              </>
+            )}
           </div>
         </div>
       </div>
