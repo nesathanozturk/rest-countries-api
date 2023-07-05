@@ -9,27 +9,9 @@ export interface ICountry {
     png: string;
   };
   cca2: string;
-  borders: string[];
-  languages: {
-    eng: {
-      official: string;
-    };
-  };
-  subregion: string;
-  tld: string[];
 }
 
-export interface ICountryDetail {
-  name: {
-    common: string;
-  };
-  capital: string;
-  region: string;
-  population: number;
-  flags: {
-    png: string;
-  };
-  cca2: string;
+export interface ICountryDetail extends ICountry {
   borders: string[];
   subregion: string;
   tld: string[];

@@ -5,21 +5,21 @@ const CountryDetail = ({ countryDetail }: ICountryDetails) => {
   return (
     <>
       <div className="flex flex-col md:flex-row gap-10">
-        <div className="w-full md:w-1/2 relative">
+        <div className="w-full md:w-2/3">
           <Image
-            src={countryDetail.flags?.png}
-            alt={countryDetail.name?.common}
+            src={countryDetail?.flags?.png}
+            alt={countryDetail?.name.common}
             className="object-cover"
-            width={700}
-            height={500}
+            width={1000}
+            height={1000}
           />
         </div>
-        <div className="py-10 ml-10">
+        <div className="w-full md:w-1/2 py-10 md:ml-10">
           <h1 className="text-3xl font-bold mb-10">
             {countryDetail.name?.common}
           </h1>
           <div className="flex flex-col md:flex-row gap-10">
-            <div className="w-full md:w-1/2">
+            <div>
               <p className="mb-3">
                 <span className="font-semibold">Native Name: </span>
                 {countryDetail.name?.common}
@@ -48,20 +48,19 @@ const CountryDetail = ({ countryDetail }: ICountryDetails) => {
               </p>
             </div>
           </div>
+          <div className="flex flex-wrap gap-2 mt-5">
+            <h2 className="text-lg font-semibold">Border Countries:</h2>
+            {countryDetail?.borders?.map((border, i) => (
+              <div
+                key={i}
+                className="bg-gray-200 w-24 h-8 rounded-md shadow-md text-center"
+              >
+                {border}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-      {/* <h2 className="text-xl font-bold mb-5">Border Countries:</h2> */}
-      {/* <div className="flex flex-wrap gap-2">
-        {countryDetail?.borders?.map((border) => (
-          <div
-            key={border}
-            className="bg-gray-200 px-5 py-2 rounded-md shadow-md"
-          >
-            {border}
-          </div>
-        ))}
-        ;
-      </div> */}
     </>
   );
 };
