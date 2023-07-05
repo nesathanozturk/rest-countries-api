@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     colors: {
       "dm-text": "hsl(0, 0%, 100%)",
-      "lm-text": "hsl(200, 15%, 8%)",
+      "lm-txt": "hsl(200, 15%, 8%)",
       "lm-input": "hsl(0, 0%, 52%)",
     },
     backgroundColor: {
@@ -16,6 +16,7 @@ module.exports = {
       "dm-bg": "hsl(207, 26%, 17%)",
       "dm-el": "hsl(209, 23%, 22%)",
       "lm-input": "hsl(0, 0%, 52%)",
+      "lm-el": "hsl(0, 0%, 100%)",
     },
   },
   plugins: [],
