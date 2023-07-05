@@ -1,13 +1,29 @@
+"use client";
+
 import { FaAngleDown } from "react-icons/fa";
+import { useState } from "react";
 
 const Select = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const handleMenuOpen = () => {
+    setIsOpen((prev) => !prev);
+  };
+
   return (
-    <div className="text-lm-txt">
-      <div className="w-44 bg-lm-el p-4 px-5 rounded-md flex justify-between items-center shadow-sm">
+    <div className="text-lm-txt relative">
+      <div
+        onClick={handleMenuOpen}
+        className="w-44 bg-lm-el p-4 px-5 rounded-md flex justify-between items-center shadow-sm cursor-pointer"
+      >
         <h1 className="text-xs font-semibold">Filter by Region</h1>
-        <FaAngleDown size={13} className="cursor-pointer" />
+        <FaAngleDown size={13} />
       </div>
-      <div className="hidden w-44 bg-lm-el p-4 px-6 rounded-md mt-1 font-semibold text-xs shadow-sm">
+      <div
+        className={`w-44 bg-lmel absolute top-12 p-4 px-6 rounded-md mt-1 font-semibold text-xs shadow-sm z-10 ${
+          isOpen ? "block" : "hidden"
+        }`}
+      >
         <ul>
           <li className="mb-2">Africa</li>
           <li className="mb-2">America</li>
