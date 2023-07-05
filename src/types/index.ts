@@ -18,3 +18,10 @@ export interface IData {
 export interface ICountryProps {
   country: ICountry;
 }
+
+export interface IContext {
+  countries: string[];
+  setCountries: React.Dispatch<React.SetStateAction<string[]>>;
+  regions: string[];
+  setRegions: React.Dispatch<React.SetStateAction<string[]>>;
+}

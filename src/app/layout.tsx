@@ -1,5 +1,7 @@
 import "./globals.css";
+import { CountriesProvider } from "@/context/CountriesContext";
 import Header from "@/components/Header";
+
 import { Nunito_Sans } from "next/font/google";
 
 const nunitoSans = Nunito_Sans({
@@ -19,10 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-lm-gray text-lm-txt ${nunitoSans.className}`}>
-        <Header />
-        {children}
-      </body>
+      <CountriesProvider>
+        <body className={`bg-lm-gray text-lm-txt ${nunitoSans.className}`}>
+          <Header />
+          {children}
+        </body>
+      </CountriesProvider>
     </html>
   );
 }
