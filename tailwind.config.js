@@ -5,13 +5,17 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  colors: {
-    "c-white": "hsl(0, 0%, 100%)",
-    "vl-gray": "hsl(0, 0%, 98%)",
-    "dark-gray": "hsl(0, 0%, 52%)",
-    "db-text": "hsl(200, 15%, 8%)",
-    "db-bg": "hsl(209, 23%, 22%)",
-    "db-el": "hsl(207, 26%, 17%)",
+  theme: {
+    colors: {
+      "dm-text": "hsl(0, 0%, 100%)",
+      "lm-text": "hsl(200, 15%, 8%)",
+    },
+    backgroundColor: {
+      "lm-gray": "hsl(0, 0%, 98%)",
+      "dm-bg": "hsl(207, 26%, 17%)",
+      "dm-el": "hsl(209, 23%, 22%)",
+      "lm-input": "hsl(0, 0%, 52%)",
+    },
   },
   plugins: [],
 };
