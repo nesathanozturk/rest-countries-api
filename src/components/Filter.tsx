@@ -1,5 +1,5 @@
-import Select from "./Select";
-import Input from "./Input";
+import Select from "./ui/Select";
+import Input from "./ui/Input";
 
 const Filter = () => {
   return (
