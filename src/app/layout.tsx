@@ -19,9 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={nunitoSans.className}>
+      <body className={`bg-lm-gray text-lm-txt ${nunitoSans.className}`}>
         <Header />
-        <main>{children}</main>
+        {children}
       </body>
     </html>
   );

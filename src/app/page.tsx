@@ -2,7 +2,7 @@ import Filter from "@/components/Filter";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-lm-gray pt-10 text-lm-text">
+    <main className="px-5 md:px-20">
       <Filter />
     </main>
   );
