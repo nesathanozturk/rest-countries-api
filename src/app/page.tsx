@@ -6,7 +6,7 @@ export default async function Home() {
   const data = await getCountries();
 
   return (
-    <main className="px-5 md:px-20">
+    <main className="px-5 md:px-20 text-lmtxt">
       <Filter />
       <Countries data={data} />
     </main>

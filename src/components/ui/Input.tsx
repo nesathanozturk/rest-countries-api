@@ -7,7 +7,7 @@ const Input = () => {
       <input
         type="text"
         placeholder="Search for a country..."
-        className="w-full sm:w-96 py-4 pl-14 rounded-md shadow-md text-xs font-medium"
+        className="w-full sm:w-96 py-4 pl-14 rounded-md shadow-md text-xs font-medium focus:outline-none"
       />
     </div>
   );

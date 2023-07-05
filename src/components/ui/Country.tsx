@@ -13,17 +13,16 @@ const Country = ({ country }: ICountryProps) => {
         />
       </div>
       <div className="p-6">
-        <h1 className="font-bold text-lmtxt mb-4">{country?.name?.common}</h1>
+        <h1 className="font-bold mb-4">{country?.name?.common}</h1>
         <h3>
-          <span className="font-semibold text-lmtxt ">Population:</span>{" "}
+          <span className="font-semibold ">Population:</span>{" "}
           {country?.population}
         </h3>
         <h3>
-          <span className="font-semibold text-lmtxt ">Region:</span>{" "}
-          {country?.region}
+          <span className="font-semibold ">Region:</span> {country?.region}
         </h3>
         <h3>
-          <span className="font-semibold text-lmtxt ">Capital:</span>{" "}
+          <span className="font-semibold ">Capital:</span>{" "}
           {country?.capital ? country?.capital : "N/A"}
         </h3>
       </div>
