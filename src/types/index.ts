@@ -9,6 +9,30 @@ export interface ICountry {
     png: string;
   };
   cca2: string;
+  borders: string[];
+  languages: {
+    eng: {
+      official: string;
+    };
+  };
+  subregion: string;
+  tld: string[];
+}
+
+export interface ICountryDetail {
+  name: {
+    common: string;
+  };
+  capital: string;
+  region: string;
+  population: number;
+  flags: {
+    png: string;
+  };
+  cca2: string;
+  borders: string[];
+  subregion: string;
+  tld: string[];
 }
 
 export interface IData {
@@ -21,4 +45,12 @@ export interface ICountries {
 
 export interface ICountryProps {
   country: ICountry;
+}
+
+export interface ICountryDetails {
+  countryDetail: ICountryDetail;
+}
+
+export interface Params {
+  params: { name: string };
 }

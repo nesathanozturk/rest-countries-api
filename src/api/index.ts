@@ -1,4 +1,4 @@
-import { ICountry } from "@/types";
+import { ICountry, ICountryDetail } from "@/types";
 
 export const getCountries = async (): Promise<ICountry[]> => {
   const res = await fetch("https://restcountries.com/v3.1/all");
@@ -6,8 +6,8 @@ export const getCountries = async (): Promise<ICountry[]> => {
   return data;
 };
 
-export const getCountry = async (name: string): Promise<ICountry> => {
+export const getCountry = async (name: string): Promise<ICountryDetail> => {
   const res = await fetch(`https://restcountries.com/v3.1/name/${name}`);
   const data = await res.json();
-  return data;
+  return data[0];
 };
