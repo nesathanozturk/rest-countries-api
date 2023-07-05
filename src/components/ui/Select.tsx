@@ -25,6 +25,7 @@ const Select = () => {
         }`}
       >
         <ul>
+          <li className="mb-2">All</li>
           <li className="mb-2">Africa</li>
           <li className="mb-2">America</li>
           <li className="mb-2">Asia</li>
