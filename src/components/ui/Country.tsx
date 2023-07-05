@@ -3,26 +3,28 @@ import Image from "next/image";
 
 const Country = ({ country }: ICountryProps) => {
   return (
-    <div>
+    <div className="bg-lm-el shadow-sm rounded-md">
       <div>
         <Image
           src={country?.flags?.png}
-          alt={country?.name.official}
-          className="max-w-full h-auto"
-          width={100}
-          height={100}
+          alt={country?.name.common}
+          width={500}
+          height={500}
         />
       </div>
-      <h1>{country?.name?.official}</h1>
-      <div>
+      <div className="p-6">
+        <h1 className="font-bold text-lm-txt mb-4">{country?.name?.common}</h1>
         <h3>
-          <span>Population:</span> {country?.population}
+          <span className="font-semibold text-lm-txt ">Population:</span>{" "}
+          {country?.population}
         </h3>
         <h3>
-          <span>Region:</span> {country?.region}
+          <span className="font-semibold text-lm-txt ">Region:</span>{" "}
+          {country?.region}
         </h3>
         <h3>
-          <span>Caiptal:</span> {country?.capital}
+          <span className="font-semibold text-lm-txt ">Caiptal:</span>{" "}
+          {country?.capital}
         </h3>
       </div>
     </div>

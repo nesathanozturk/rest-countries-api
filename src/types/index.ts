@@ -1,6 +1,6 @@
 export interface ICountry {
   name: {
-    official: string;
+    common: string;
   };
   capital: string;
   region: string;
