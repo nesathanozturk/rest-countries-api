@@ -11,6 +11,29 @@ const nunitoSans = Nunito_Sans({
 export const metadata = {
   title: "Countries App",
   description: "An app to view countries and their details",
+  generator: "Next.js",
+  applicationName: "Countries App",
+  referrer: "origin-when-cross-origin",
+  keywords: [
+    "Next.js",
+    "React",
+    "JavaScript",
+    "Countries",
+    "Country",
+    "Countries App",
+    "App",
+    "Country App",
+    "Country Detail",
+    "Detail",
+  ],
+  authors: [
+    {
+      name: "Neşathan Öztürk",
+      url: "https://www.github.com/nesathanozturk/",
+    },
+  ],
+  creator: "Neşathan Öztürk",
+  publisher: "Neşathan Öztürk",
 };
 
 export default function RootLayout({
