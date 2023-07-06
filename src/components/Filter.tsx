@@ -1,11 +1,12 @@
 import Select from "./ui/Select";
 import Input from "./ui/Input";
+import { IFilteredCountries } from "@/types";
 
-const Filter = () => {
+const Filter = ({ filteredCountries }: IFilteredCountries) => {
   return (
     <section className="flex gap-10 sm:gap-0 flex-col sm:flex-row justify-between">
       <Input />
-      <Select />
+      <Select filteredCountries={filteredCountries} />
     </section>
   );
 };

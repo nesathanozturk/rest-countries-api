@@ -1,16 +1,27 @@
 "use client";
 
 import { useState } from "react";
-import { IData } from "@/types";
 import Countries from "./Countries";
 import Filter from "./Filter";
+import { IData } from "@/types";
 
 const Main = ({ data }: IData) => {
   const [countries, setCountries] = useState(data);
 
+  const filteredCountries = (reg: string) => {
+    if (reg === "All") {
+      setCountries(data);
+      return;
+    }
+    const filteredCountriesByRegion = countries?.filter(
+      (country) => country?.region === reg
+    );
+    setCountries(filteredCountriesByRegion);
+  };
+
   return (
-    <main className="h-screen bg-lmgray dark:bg-dmbg pt-16 px-5 md:px-20 text-lmtxt dark:text-dmtext">
-      <Filter />
+    <main className="min-h-screen bg-lmgray dark:bg-dmbg text-lmtxt dark:text-dmtext pt-16 py-3 px-2 md:px-20">
+      <Filter filteredCountries={filteredCountries} />
       <Countries countries={countries} />
     </main>
   );

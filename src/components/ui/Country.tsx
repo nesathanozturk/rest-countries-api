@@ -1,6 +1,6 @@
-import { ICountryProps } from "@/types";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { ICountryProps } from "@/types";
 
 const Country = ({ country }: ICountryProps) => {
   return (

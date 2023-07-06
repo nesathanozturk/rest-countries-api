@@ -3,10 +3,12 @@
 import { HiOutlineMoon, HiMoon } from "react-icons/hi";
 import { useContext } from "react";
 import { ThemeContext } from "@/context/ThemeContext";
-import { IContext } from "@/types";
+import { IThemeContext } from "@/types";
 
 const DarkButton = () => {
-  const { isDarkMode, toggleDarkMode } = useContext(ThemeContext) as IContext;
+  const { isDarkMode, toggleDarkMode } = useContext(
+    ThemeContext
+  ) as IThemeContext;
 
   return (
     <>

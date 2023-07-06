@@ -1,7 +1,7 @@
 "use client";
 
-import { IThemeContext } from "@/types";
 import { createContext, useState } from "react";
+import { IThemeContext } from "@/types";
 
 export const ThemeContext = createContext<IThemeContext | null>(null);
 

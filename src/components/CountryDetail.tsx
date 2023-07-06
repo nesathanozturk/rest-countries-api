@@ -1,7 +1,22 @@
-import { ICountryDetails } from "@/types";
 import Image from "next/image";
+import { ICountryDetails } from "@/types";
 
 const CountryDetail = ({ countryDetail }: ICountryDetails) => {
+  const getCountryBorder = !countryDetail.borders ? (
+    <p className="text-lg font-semibold">No border countries</p>
+  ) : (
+    <>
+      {countryDetail?.borders?.map((border, i) => (
+        <div
+          key={i}
+          className="bg-lmel dark:bg-dmel w-24 h-8 rounded-md shadow-md text-center p-0.5"
+        >
+          {border}
+        </div>
+      ))}
+    </>
+  );
+
   return (
     <>
       <div className="flex flex-col md:flex-row gap-10">
@@ -50,20 +65,7 @@ const CountryDetail = ({ countryDetail }: ICountryDetails) => {
           </div>
           <div className="flex flex-wrap gap-2 mt-5">
             <h2 className="text-lg font-semibold">Border Countries:</h2>
-            {!countryDetail.borders ? (
-              <p className="text-lg font-semibold">No border countries</p>
-            ) : (
-              <>
-                {countryDetail?.borders?.map((border, i) => (
-                  <div
-                    key={i}
-                    className="bg-lmel dark:bg-dmel w-24 h-8 rounded-md shadow-md text-center p-0.5"
-                  >
-                    {border}
-                  </div>
-                ))}
-              </>
-            )}
+            {getCountryBorder}
           </div>
         </div>
       </div>

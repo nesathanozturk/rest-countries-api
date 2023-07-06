@@ -2,12 +2,13 @@
 
 import { FaAngleDown } from "react-icons/fa";
 import { useState } from "react";
+import { IFilteredCountries } from "@/types";
 
-const Select = () => {
+const Select = ({ filteredCountries }: IFilteredCountries) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleMenuOpen = () => {
-    setIsOpen((prev) => !prev);
+    setIsOpen((isOpen) => !isOpen);
   };
 
   return (
@@ -26,12 +27,22 @@ const Select = () => {
           }`}
         >
           <ul>
-            <li className="mb-2">All</li>
-            <li className="mb-2">Africa</li>
-            <li className="mb-2">America</li>
-            <li className="mb-2">Asia</li>
-            <li className="mb-2">Europe</li>
-            <li>Ocenia</li>
+            <li onClick={() => filteredCountries("All")} className="mb-2">
+              All
+            </li>
+            <li onClick={() => filteredCountries("Africa")} className="mb-2">
+              Africa
+            </li>
+            <li onClick={() => filteredCountries("Americas")} className="mb-2">
+              America
+            </li>
+            <li onClick={() => filteredCountries("Asia")} className="mb-2">
+              Asia
+            </li>
+            <li onClick={() => filteredCountries("Europe")} className="mb-2">
+              Europe
+            </li>
+            <li onClick={() => filteredCountries("Oceania")}>Oceania</li>
           </ul>
         </div>
       </div>

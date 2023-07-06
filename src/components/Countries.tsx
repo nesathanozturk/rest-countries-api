@@ -2,9 +2,9 @@
 
 import { useContext } from "react";
 import Country from "./ui/Country";
+import NoCountryFound from "./ui/NoCountryFound";
 import { SearchContext } from "@/context/SearchContext";
 import { ICountries, ISearchContext } from "@/types";
-import NoCountryFound from "./ui/NoCountryFound";
 
 const Countries = ({ countries }: ICountries) => {
   const { term, setTerm } = useContext(SearchContext) as ISearchContext;

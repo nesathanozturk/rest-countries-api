@@ -47,3 +47,7 @@ export interface ISearchContext {
   term: string;
   setTerm: (term: string) => void;
 }
+
+export interface IFilteredCountries {
+  filteredCountries: (reg: string) => void;
+}
