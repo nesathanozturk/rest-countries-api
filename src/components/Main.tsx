@@ -9,7 +9,7 @@ const Main = ({ data }: IData) => {
   const [countries, setCountries] = useState(data);
 
   return (
-    <main className="bg-lmgray dark:bg-dmbg pt-16 px-5 md:px-20 text-lmtxt dark:text-dmtext">
+    <main className="h-screen bg-lmgray dark:bg-dmbg pt-16 px-5 md:px-20 text-lmtxt dark:text-dmtext">
       <Filter />
       <Countries countries={countries} />
     </main>

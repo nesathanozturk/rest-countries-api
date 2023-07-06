@@ -5,7 +5,7 @@ import { ISearchContext } from "@/types";
 
 export const SearchContext = createContext<ISearchContext | null>(null);
 
-function Provider({ children }: { children: React.ReactNode }) {
+function SearchProvider({ children }: { children: React.ReactNode }) {
   const [term, setTerm] = useState<string>("");
 
   return (
@@ -15,4 +15,4 @@ function Provider({ children }: { children: React.ReactNode }) {
   );
 }
 
-export { Provider };
+export { SearchProvider };
