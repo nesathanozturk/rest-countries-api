@@ -5,7 +5,7 @@ import Link from "next/link";
 const Country = ({ country }: ICountryProps) => {
   return (
     <Link href={`/country/${country?.name?.common}`}>
-      <div className="bg-lmel dark:bg-dmbg shadow-sm rounded-md xs:h-80">
+      <div className="bg-lmel dark:bg-dmel shadow-sm rounded-md xs:h-80">
         <div className="aspect-video w-full relative">
           <Image
             src={country?.flags?.png}

@@ -37,8 +37,13 @@ export interface Params {
   params: { name: string };
 }
 
-export interface IContext {
+export interface IThemeContext {
   isDarkMode: boolean | string;
   toggleDarkMode: () => void;
   setIsDarkMode: (isDarkMode: boolean) => void;
+}
+
+export interface ISearchContext {
+  term: string;
+  setTerm: (term: string) => void;
 }
