@@ -7,6 +7,7 @@
 - Next.js
 - Typescript
 - Context API
+- Local Storage
 - Tailwind for styles
 - Icons for React Icons
 
@@ -16,7 +17,7 @@
 - Filter by region.
 - Search by country name.
 - Dark mode.
-- Dynamic country details page with Router.
+- Dynamic country details page with Next Router.
 
 ## Getting Started
 
