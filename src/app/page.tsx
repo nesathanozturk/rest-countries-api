@@ -1,12 +1,14 @@
-import { getCountries } from "@/api";
+import Header from "@/components/Header";
 import Main from "@/components/Main";
+import { getCountries } from "@/api";
 
 export default async function Home() {
   const data = await getCountries();
 
   return (
-    <main className="px-5 md:px-20 text-lmtxt">
+    <>
+      <Header />
       <Main data={data} />
-    </main>
+    </>
   );
 }

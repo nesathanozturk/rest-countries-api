@@ -57,7 +57,7 @@ const CountryDetail = ({ countryDetail }: ICountryDetails) => {
                 {countryDetail?.borders?.map((border, i) => (
                   <div
                     key={i}
-                    className="bg-gray-200 w-24 h-8 rounded-md shadow-md text-center"
+                    className="bg-lmel dark:bg-dmel w-24 h-8 rounded-md shadow-md text-center p-0.5"
                   >
                     {border}
                   </div>

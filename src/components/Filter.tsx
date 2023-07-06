@@ -3,10 +3,10 @@ import Input from "./ui/Input";
 
 const Filter = () => {
   return (
-    <div className="flex gap-10 sm:gap-0 flex-col sm:flex-row justify-between mt-12">
+    <section className="flex gap-10 sm:gap-0 flex-col sm:flex-row justify-between">
       <Input />
       <Select />
-    </div>
+    </section>
   );
 };
 

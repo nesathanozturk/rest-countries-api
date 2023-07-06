@@ -36,3 +36,9 @@ export interface ICountryDetails {
 export interface Params {
   params: { name: string };
 }
+
+export interface IContext {
+  isDarkMode: boolean | string;
+  toggleDarkMode: () => void;
+  setIsDarkMode: (isDarkMode: boolean) => void;
+}

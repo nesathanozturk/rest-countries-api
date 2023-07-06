@@ -1,7 +1,6 @@
-import "./globals.css";
-import Header from "@/components/Header";
-
 import { Nunito_Sans } from "next/font/google";
+import "./globals.css";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 const nunitoSans = Nunito_Sans({
   weight: ["300", "600", "800"],
@@ -20,9 +19,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-lm-gray text-lm-txt ${nunitoSans.className}`}>
-        <Header />
-        {children}
+      <body className={nunitoSans.className}>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
