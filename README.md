@@ -7,7 +7,6 @@
 - Next.js
 - Typescript
 - Context API
-- Local Storage
 - Tailwind for styles
 - Icons for React Icons
 
