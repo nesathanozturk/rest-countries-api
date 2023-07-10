@@ -46,7 +46,7 @@ const CountryPage = async ({ params }: Params) => {
   const data = await getCountry(name);
 
   return (
-    <main className="bg-lmgray dark:bg-dmbg text-lmtxt dark:text-dmtext">
+    <main className="min-h-screen bg-lmgray dark:bg-dmbg text-lmtxt dark:text-dmtext">
       <Header />
       <section className="py-10 px-5 md:px-20">
         <CountryContainer data={data} />
