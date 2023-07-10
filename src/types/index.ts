@@ -29,6 +29,10 @@ export interface ICountryProps {
   country: ICountry;
 }
 
+export interface ICountryDetailProps {
+  data: ICountryDetail;
+}
+
 export interface ICountryDetails {
   countryDetail: ICountryDetail;
 }

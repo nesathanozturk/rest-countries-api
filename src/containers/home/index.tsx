@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Countries from "./Countries";
-import Filter from "./Filter";
+import Countries from "@/components/Countries";
+import Filter from "@/components/Filter";
 import { IData } from "@/types";
 
-const Main = ({ data }: IData) => {
+const HomeContainer = ({ data }: IData) => {
   const [countries, setCountries] = useState(data);
 
   const filteredCountries = (reg: string) => {
@@ -27,4 +27,4 @@ const Main = ({ data }: IData) => {
   );
 };
 
-export default Main;
+export default HomeContainer;

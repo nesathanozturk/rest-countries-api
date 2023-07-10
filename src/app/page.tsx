@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Main from "@/components/Main";
+import HomeContainer from "@/containers/home";
 import { getCountries } from "@/api";
 
 export default async function Home() {
@@ -8,7 +8,7 @@ export default async function Home() {
   return (
     <>
       <Header />
-      <Main data={data} />
+      <HomeContainer data={data} />
     </>
   );
 }

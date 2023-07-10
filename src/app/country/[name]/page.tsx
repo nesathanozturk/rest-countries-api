@@ -1,9 +1,7 @@
-import BackButton from "@/components/ui/BackButton";
-import CountryDetail from "@/components/CountryDetail";
-import Header from "@/components/Header";
+import CountryContainer from "@/containers/country-detail";
 import { getCountry } from "@/api";
 import { Params } from "@/types";
-import { Metadata } from "next";
+import Header from "@/components/Header";
 
 export async function generateMetadata({ params }: Params) {
   const { name } = params;
@@ -50,12 +48,9 @@ const CountryPage = async ({ params }: Params) => {
   return (
     <main className="bg-lmgray dark:bg-dmbg text-lmtxt dark:text-dmtext">
       <Header />
-      <div className="py-10 px-5 md:px-20">
-        <BackButton />
-        <section className="mt-10">
-          <CountryDetail countryDetail={data} />
-        </section>
-      </div>
+      <section className="py-10 px-5 md:px-20">
+        <CountryContainer data={data} />
+      </section>
     </main>
   );
 };
