@@ -20,7 +20,7 @@ const HomeContainer = ({ data }: IData) => {
   };
 
   return (
-    <main className="min-h-screen bg-lmgray dark:bg-dmbg text-lmtxt dark:text-dmtext pt-16 py-3 px-2 md:px-20">
+    <main className="min-h-screen bg-lmgray dark:bg-dmbg text-lmtxt dark:text-dmtext py-10 px-5 md:px-20">
       <Filter filteredCountries={filteredCountries} />
       <Countries countries={countries} />
     </main>
