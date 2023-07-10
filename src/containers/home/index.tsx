@@ -13,7 +13,7 @@ const HomeContainer = ({ data }: IData) => {
       setCountries(data);
       return;
     }
-    const filteredCountriesByRegion = countries?.filter(
+    const filteredCountriesByRegion = data?.filter(
       (country) => country?.region === reg
     );
     setCountries(filteredCountriesByRegion);
